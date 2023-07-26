@@ -1,0 +1,14 @@
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+.field {
+    background-color: rgb(213, 196, 85);
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: bold;
+}

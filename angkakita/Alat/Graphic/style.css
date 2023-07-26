@@ -1,0 +1,81 @@
+@font-face {
+    font-family: MontserratMedium;
+    src: url(../../Font/Montserrat/Montserrat-Medium.ttf);
+
+}
+
+@font-face {
+    font-family: MontserratBold;
+    src: url(../../Font/Montserrat/Montserrat-SemiBold.ttf);
+
+}
+
+body {
+    background-color: #e0e0e0;
+    font-family: 'MontserratMedium', sans-serif;
+}
+
+
+
+.navbar .container .navbar-brand {
+    font-family: 'MontserratBold', sans-serif;
+    /* color: #21409A; */
+    color: black;
+}
+
+.navbar .nav-item .nav-link {
+    font-family: 'MontserratMedium', sans-serif;
+    /* color: #21409A; */
+    color: black;
+    opacity: 1;
+}
+
+.navbar {
+    background-color: #e0e0e0;
+}
+
+.nav-link:hover {
+    opacity: 1;
+}
+
+.box {
+    border-radius: 50px;
+    background: linear-gradient(145deg, #cacaca, #f0f0f0);
+    box-shadow: 20px 20px 60px #bebebe,
+        -20px -20px 60px #ffffff;
+    padding: 20px;
+    margin-top: 20px;
+    align-items: center;
+}
+
+.main {
+    margin-top: 40px;
+}
+
+.x-set {
+    width: 90px;
+}
+
+input[type=text] {
+    width: 300px;
+}
+
+input {
+    padding: 6px;
+}
+
+body,
+html,
+input {
+    font-family: 'MontserratMedium', sans-serif;
+    font-size: 11pt;
+
+}
+
+form {
+    margin: 20px 0;
+}
+
+#eq {
+    margin: auto;
+}

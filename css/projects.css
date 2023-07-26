@@ -1,0 +1,41 @@
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+@media (min-width: 575.98px) {
+    h1 {
+        font-size: 4mkrem;
+    }
+}
+
+.card {
+    background-color: rgb(212, 195, 84);
+    border: 1px solid rgb(0, 0, 0);
+    box-sizing: border-box;
+    margin-top: 30px;
+}
+
+a.btn:hover {
+    background-color: black;
+    color: rgb(212, 195, 84);
+    transition: 200ms;
+}
+
+.btn {
+    color: black;
+    background-color: transparent;
+    border: 1px solid black;
+}
+
+.btn:focus {
+    box-shadow: none;
+}
+
+img {
+    border: none;
+}
+
+.plans {
+    background-color: rgb(212, 195, 84);
+    border: 1px solid black;
+}

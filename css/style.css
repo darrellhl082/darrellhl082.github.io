@@ -1,0 +1,169 @@
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+.jumbotron {
+    height: 100vh;
+}
+
+img {
+    height: 100vh;
+}
+
+.about {
+    height: 100vh;
+    background-color: white
+}
+
+.nav-hide {
+    opacity: 0;
+    padding-top: 17px;
+    padding-bottom: 17px;
+    transition: 0.35s;
+}
+
+li {
+    list-style: none;
+    display: inline;
+    margin: 0 8px;
+}
+
+.header {
+    font-weight: 800;
+}
+
+.nav-normal {
+    opacity: 1;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    transition: 0.35s;
+}
+
+.link {
+    background-color: rgb(213, 196, 85);
+    width: fit-content;
+    padding: 0 10px;
+}
+
+.btn-detail:hover {
+    color: white;
+}
+
+@media (max-width: 575.98px) {
+    .nav {
+        position: fixed;
+        z-index: 9999;
+    }
+    .jumbotron {
+        position: relative;
+        height: 100vh;
+        overflow: hidden;
+        background-color: white;
+    }
+    .image {
+        display: flex;
+        justify-content: center;
+        width: 100vw;
+        position: absolute;
+        bottom: 0;
+        
+        background-color: rgb(213, 196, 85);
+    }
+    .title1 {
+        font-size: 3.5rem;
+        line-height: 3.2rem;
+        font-weight: bold;
+        color: black;
+    }
+    .sub1 {
+        color: rgb(213, 196, 85);
+        font-size: 1.1rem;
+    }
+    img {
+        align-self: flex-end;
+        width: 80%;
+        height: fit-content;
+    }
+    .header {
+        margin-top: 10%;
+        margin-left: 8%;
+        margin-bottom: 10%;
+        position: absolute;
+        z-index: 999;
+      
+    }
+ 
+    .btn-detail {
+        margin-top: 5%;
+        display: inline-block;
+        background-color: rgb(213, 196, 85);
+        border: 2px solid rgb(213, 196, 85);
+        color: white;
+        border-radius: none;
+        text-decoration: none;
+        font-size: 1rem;
+        height: 2.7rem;
+        line-height: 2.5rem;
+    }
+}
+
+.icon {
+    width: 25px;
+    height: fit-content;
+    margin-left: 5px;
+}
+
+@media (min-width: 575.98px) {
+    .link ul {
+        padding: 5px;
+    }
+    .btn-detail {
+        display: inline-block;
+        background-color: rgb(213, 196, 85);
+        color: white;
+        border-radius: none;
+        text-decoration: none;
+        font-size: 1.2rem;
+        height: 2.7rem;
+        line-height: 2.7rem;
+        border: 1px solid rgb(212, 195, 84);
+        margin: 0 8px;
+    }
+    .image {
+        height: 100vh;
+        background-color: rgb(213, 196, 85);
+    }
+    .nav-item {
+        margin: 0 10px;
+    }
+    .header {
+        position: absolute;
+        top: 28%;
+        left: 14%;
+    }
+    .title1 {
+        font-size: 5rem;
+        line-height: 5rem;
+        font-weight: bold;
+    }
+    .sub1 {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: rgb(213, 196, 85);
+    }
+    .about h1 {
+        font-weight: bold;
+        margin-top: 4rem;
+        font-size: 4rem;
+    }
+    .icons {
+        filter: brightness(0) invert(1);
+        width: 30px;
+        height: fit-content;
+    }
+    .btn-project {
+        background-color: white;
+        color: rgb(213, 196, 85);
+        border: 1px solid rgb(213, 196, 85);
+    }
+}

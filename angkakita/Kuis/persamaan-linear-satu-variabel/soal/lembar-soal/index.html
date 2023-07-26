@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <!-- My Css -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>AngkaKita</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md navbar-light sticky-top">
+        <div class="container">
+            <a class="nav-link text-decoration-none text-black" href="../../index.html">Kembali</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav ms-auto mb-2 mb-md-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="../../../../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../../../bahan-ajar/index.html">Materi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../../../tentang/index.html">Tentang</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../../../soal-latihan/index.html">Soal Latihan</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../../../kuis/index.html">Kuis</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../../../kontak/index.html">Kontak</a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+    <div class="container mt-2 w-100 quest-page ">
+        <div class="row p-3 justify-content-center ">
+            <div class="col-md-8 box">
+                <div class="question">
+                    <h4 id="nomor"></h4>
+                    <p id="num1"></p>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="row p-3 justify-content-center">
+            <div class="col-md-4 box ms-2 me-2 answer  ans-1 " code="A">A. <span class="ans-1-a"></span></div>
+            <div class="col-md-4 box ms-2 me-2 answer  ans-1 " code="B">B. <span class="ans-1-b"></span></div>
+            <div class="col-md-4 box ms-2 me-2 answer  ans-1 " code="C">C. <span class="ans-1-c"></span></div>
+            <div class="col-md-4 box ms-2 me-2 answer ans-1 " code="D">D. <span class="ans-1-d"></span></div>
+        </div>
+        <div class="row">
+            <div class="col-md text-center">
+                <button type="button" class="btn btn-outline-dark" id="next">Selanjutnya</button>
+                <button type="button" class="btn d-none btn-outline-dark d-inline-block ms-md-3 me-md-3"
+                    data-bs-toggle="modal" data-bs-target="#finish" id="finishbtn">Selesai</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Daftar Soal</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <ul>
+                        <li class="d-inline-block text-center list-item">
+                            <button type="button" code="1"
+                                class="btn p-3  btn-outline-dark text-black text-decoration-none">1</button>
+                        </li>
+                        <li class="d-inline-block text-center list-item">
+                            <button type="button" code="2"
+                                class="btn p-3  btn-outline-dark text-black text-decoration-none">2</button>
+                        </li>
+                        <li class="d-inline-block text-center list-item">
+                            <button type="button" code="3"
+                                class="btn p-3  btn-outline-dark text-black text-decoration-none">3</button>
+                        </li>
+                        <li class="d-inline-block text-center list-item">
+                            <button type="button" code="4"
+                                class="btn p-3  btn-outline-dark text-black text-decoration-none">4</button>
+                        </li>
+                        <li class="d-inline-block text-center list-item">
+                            <button type="button" code="5"
+                                class="btn p-3  btn-outline-dark text-black text-decoration-none">5</button>
+                        </li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container mt-2 w-100 score-page">
+        <div class="row p-2 justify-content-center">
+            <div class="col-md-8 text-center box">
+                <h2>Nilai Kamu</h2>
+                <span class="d-block fs-1" id="scorePage">80</span>
+                <div class="score mt-5">
+                    <div class="benar d-inline-block m-3">
+                        <h4>Benar</h4>
+                        <span class="d-block" id="trueAmount"></span>
+                    </div>
+                    <div class="salah d-inline-block m-3">
+                        <h4>Salah</h4>
+                        <span class="d-block" id="falseAmount"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row p-2 justify-content-center">
+            <div class="col-md-8 text-center box">
+                <h4>Statistik</h4>
+
+                <div class="score mt-5">
+                    <div class="benar d-block m-3">
+                        <h4>Benar</h4>
+                        <ul id="trueStats" class="list-group">
+                            <li class="listTrue list-unstyled"></li>
+                            <li class="listTrue list-unstyled"></li>
+                            <li class="listTrue list-unstyled"></li>
+                            <li class="listTrue list-unstyled"></li>
+                            <li class="listTrue list-unstyled"></li>
+                        </ul>
+                        <h4>Salah</h4>
+                        <ul id="falseStats" class="list-group">
+                            <li class="listFalse list-unstyled"></li>
+                            <li class="listFalse list-unstyled"></li>
+                            <li class="listFalse list-unstyled"></li>
+                            <li class="listFalse list-unstyled"></li>
+                            <li class="listFalse list-unstyled"></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row p-2 justify-content-center">
+                <div class="col-md-8 box">
+                    <h3 class="text-center">Pembahasan Singkat</h3>
+                    <div class="explain">
+                        <h5>Nomor 1</h5>
+                        <p class="q1 "  style="white-space: pre-wrap;" >Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.     </p>
+                        <p>Jawaban Benar: <span class="true1"></span></p>
+                        <p class="exp1" style="white-space: pre-wrap;">Lorem ipsum dolor sit amet consectetur
+                            adipisicing elit. Quaerat,
+                            deserunt ex quis
+                            porro
+                            est nostrum explicabo autem nihil iusto asperiores repudiandae, temporibus
+                            dignissimos sed
+                            laborum
+                            esse quae dolores? Est, ex.</p>
+                    </div>
+                    <div class="explain">
+                        <h5>Nomor 2</h5>
+                          <p class="q2 "  style="white-space: pre-wrap;" >Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.     </p>
+                        <p>Jawaban Benar: <span class="true2"></span></p>
+                        <p class="exp2" style="white-space: pre-wrap;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat,
+                            deserunt ex quis
+                            porro
+                            est nostrum explicabo autem nihil iusto asperiores repudiandae, temporibus
+                            dignissimos sed
+                            laborum
+                            esse quae dolores? Est, ex.</p>
+                    </div>
+                    <div class="explain">
+                        <h5>Nomor 3</h5>
+                          <p class="q3 "  style="white-space: pre-wrap;" >Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.     </p>
+                        <p>Jawaban Benar: <span class="true3"></span></p>
+                        <p class="exp3" style="white-space: pre-wrap;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat,
+                            deserunt ex quis
+                            porro
+                            est nostrum explicabo autem nihil iusto asperiores repudiandae, temporibus
+                            dignissimos sed
+                            laborum
+                            esse quae dolores? Est, ex.</p>
+                    </div>
+                    <div class="explain">
+                        <h5>Nomor 4</h5>
+                          <p class="q4 "  style="white-space: pre-wrap;" >Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.     </p>
+                        <p>Jawaban Benar: <span class="true4"></span></p>
+                        <p class="exp4" style="white-space: pre-wrap;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat,
+                            deserunt ex quis
+                            porro
+                            est nostrum explicabo autem nihil iusto asperiores repudiandae, temporibus
+                            dignissimos sed
+                            laborum
+                            esse quae dolores? Est, ex.</p>
+                    </div>
+                    <div class="explain">
+                        <h5>Nomor 5</h5>
+                          <p class="q5 "  style="white-space: pre-wrap;" >Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.     </p>
+                        <p>Jawaban Benar: <span class="true5"></span></p>
+                        <p class="exp5" style="white-space: pre-wrap;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat,
+                            deserunt ex quis
+                            porro
+                            est nostrum explicabo autem nihil iusto asperiores repudiandae, temporibus
+                            dignissimos sed
+                            laborum
+                            esse quae dolores? Est, ex.</p>
+                    </div>
+
+                </div>
+            </div>
+            <div class="row text-center mb-5">
+                <div class="col">
+                    <a href="../../index.html" class="btn btn-outline-dark">Keluar</a>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="finish" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Daftar Soal</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Kamu yakin sudah selesai?</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Back</button>
+                        <button type="button" class="btn btn-primary" id="confirm-finish">Confirm</button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Jquery -->
+
+        <script src="../../../../Js/Math/math.js"></script>
+        <!-- Bootrap js -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous">
+        </script>
+
+        <!-- My Script -->
+        <script src="script.js"></script>
+        <script src="../main-script.js"></script>
+
+
+</body>
+
+</html>
