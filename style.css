@@ -1,0 +1,74 @@
+nav a{
+    color: white;
+}
+.list-sosmed{
+    
+}
+.jumbotron{
+    height: 100vh;
+}
+.title-content{
+    margin-top: 30%;
+}
+.photo-place {
+    position: relative;
+}
+.photo-hero{
+    position: absolute;
+    bottom: 0;
+}
+.photo-profile{
+    width: 70%;
+}
+.card {
+    background-color: #23253A;
+    color: white;
+    min-height: 80%;
+}
+.profile{
+    height: fit-content;
+}
+
+
+@media (max-width: 575.98px) {
+    .title-content{
+        margin-top: 20%;
+        margin-left: 10%;
+    }
+    .photo-place,.profile-photo{
+        position: static;
+    }
+    .photo-hero, .photo-profile{
+        width: 70%;
+        position: static;
+        margin-left: 10%;
+    }
+    .jumbotron{
+        height: min-content;
+    }
+    .photo-profile{
+        width: 80%;
+        margin: auto;
+    }
+    .profile-photo{
+        text-align: center;
+    }
+    .profile{
+        height: fit-content;
+    }
+    .profile-content{
+        padding-left: 1rem;
+        padding-right: 1rem;
+        text-align: center;
+    }
+    .contact{
+        padding-bottom: 1rem;
+    }
+    
+}
+
+@media (min-width: 575.98px) {
+    .profile-photo{
+        text-align: right;
+    }
+}

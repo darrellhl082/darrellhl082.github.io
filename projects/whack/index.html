@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <title>The Mole</title>
+</head>
+
+<body>
+
+    <div class="startPage bg-white">
+        <nav class="navbar position-relative first-nav navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="#">DHL+</a>
+
+                <div class="" id="">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link p-2 text-light btn btn-success "
+                                href="https://www.instagram.com/darrellhl082">Instagram</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container text-center mt-5">
+
+            <h3>WELCOME</h3>
+            <h1><strong>Whack A Mole</strong></h1>
+            <img class="mb-3 mt-2" src="img/tikus.png" width="175px" alt="mole">
+            <p>Permainan yang sederhana, hanya memukul tikus yang keluar dari tanah untuk mengumpulkan poin
+                sebanyak-banyaknya dalam durasi waktu selama 30 detik<br>Mari Bermain!!</p>
+            <div class="alert alert-box d-none alert-danger" role="alert">
+                Please Insert Name
+            </div>
+            <form name="startData">
+                <div class="form-floating">
+                    <input type="text" class="form-control mt-3 startName" id="floatingUsername" name="nama"
+                        placeholder=" Your name" aria-required="true">
+                    <label for="floatingUsername">Player Name</label>
+                </div>
+
+                <button type="submit" class="btn btn-primary mt-3 startPageBtn">Let's Go</button>
+            </form>
+        </div>
+
+    </div>
+
+    <div class="container-fluid play-ground text-center my-5 p-0 ">
+        <div class="row">
+            <div class="col">
+                <h1 class="welcome"></h1>
+            </div>
+
+        </div>
+        <div class="row mt-3">
+            <div class="col">
+                <button type="button" class="btn btn-primary mb-3 startClick" onclick="start()">Let's Start</button>
+                <div class="container">
+                    <div class="row mt-3 justify-content-center">
+                        <div class="col-3">
+                            <span class="d-block">Your Score</span>
+                            <h2 class="score">0</h2>
+
+                        </div>
+                        <div class="col-3">
+                            <span class="d-block timeLabel">Start In</span>
+                            <h2 class="timer">3</h2>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="row mb-5 mole-container justify-content-center text-center">
+            <div class="col-4 soil">
+                <div class="mole mole-whack"></div>
+            </div>
+            <div class="col-4 soil">
+                <div class="mole mole-whack"></div>
+            </div>
+            <div class="col-4 soil">
+                <div class="mole mole-whack"></div>
+            </div>
+            <div class="col-4 soil">
+                <div class="mole mole-whack"></div>
+            </div>
+            <div class="col-4 soil">
+                <div class="mole mole-whack"></div>
+            </div>
+            <div class="col-4 soil">
+                <div class="mole mole-whack"></div>
+            </div>
+        </div>
+    </div>
+
+    <form name="gameScore" id="gameScore">
+        <input type="hidden" class="form-control mt-3 " value="ss" id="Username" name="nama" placeholder="Username">
+        <input type="hidden" class="form-control mt-3" id="floatingScore" name="score" placeholder="20">
+        <input type="hidden" name="miss" id="miss">
+    </form>
+    <audio src="audio/applause.wav" class="applause"></audio>
+    <audio src="audio/Pop.mp3" class="pop"></audio>
+    <div class="closeFinal"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

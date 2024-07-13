@@ -1,0 +1,145 @@
+body {
+    height: 100vh;
+    overflow: hidden;
+}
+
+@media only screen and (max-width: 768px) {
+
+    .soil::after {
+        content: '';
+        background: url(../img/tanah.png) no-repeat;
+        display: block;
+        width: 100%;
+        height: 200px;
+        background-size: 100%;
+        margin-bottom: -33px;
+
+
+    }
+
+    .soil.appear .mole {
+        top: -20px;
+    }
+
+    .soil {
+
+        height: 200px;
+
+        position: relative;
+        overflow: hidden;
+
+    }
+
+
+
+    /* .containerMole,
+    col-md {
+        width: 100%;
+    } */
+}
+
+@media only screen and (min-width: 768px) {
+    .soil.appear .mole {
+        top: -25px;
+    }
+
+    .mole-container {
+        width: 600px;
+        margin: auto;
+    }
+
+    .startPage .container {
+        width: 600px;
+    }
+}
+
+.startPage {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    z-index: 999;
+}
+
+.congrats {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 999;
+    color: white;
+}
+
+.closeFinal {
+    margin-top: 175px;
+}
+
+.play-ground {
+    width: 100vw;
+    overflow: hidden;
+}
+
+.soil {
+
+    height: 200px;
+    /* background-color: beige; */
+    position: relative;
+    overflow: hidden;
+    float: left;
+
+}
+
+.mole-container>* {
+    padding: 0;
+    margin: 0;
+}
+
+.soil::after {
+    content: '';
+    background: url(../img/tanah.png) no-repeat;
+    display: block;
+    width: 100%;
+    height: 200px;
+    background-size: 100%;
+    position: absolute;
+    bottom: -125px;
+
+}
+
+.mole {
+    background: url(../img/tikus.png) no-repeat bottom center;
+    width: 100%;
+    height: 100%;
+    background-size: 70%;
+    position: absolute;
+    top: 200px;
+    transition: top 0.3s;
+}
+
+
+.containerMole {
+
+    margin: auto;
+    margin-top: 1rem;
+    padding: 0;
+    position: relative;
+}
+
+.soil {
+    cursor: url(../img/palu1.png), auto;
+    -webkit-user-select: none;
+    /* Safari */
+    -ms-user-select: none;
+    /* IE 10 and IE 11 */
+    user-select: none;
+    /* Standard syntax */
+}
+
+
+.soil:active {
+    cursor: url(../img/palu2.png), auto;
+}

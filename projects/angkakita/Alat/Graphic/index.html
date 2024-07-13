@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>AngkaKita</title>
+    <script src="../../Js/Math/math.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="../../Js/Math/plotly-2.3.1.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md navbar-light sticky-top">
+        <div class="container">
+            <a class="nav-link text-decoration-none text-black" href="../index.html">Kembali</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav ms-auto mb-2 mb-md-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="../../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../bahan-ajar/index.html">Materi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../tentang/index.html">Tentang</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../soal-latihan/index.html">Soal Latihan</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../Kuis/index.html">Kuis</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../kontak/index.html">Kontak</a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+    <div class="container main p-4">
+        <div class="row">
+            <div class="col-md-12 box text-center">
+                <h3 class="text-uppercase">Menggambar Grafik Persamaan</h3>
+            </div>
+        </div>
+        <div class="row justify-content-center text-center mt-5">
+            <div class="col-md-12 mt-3 text-center justify-content-center box">
+                 <button type="button" class="btn btn-outline-dark mb-3" data-bs-toggle="modal"
+                    data-bs-target="#guideModal">
+                    Panduan Penggunaan Alat
+                </button>
+                <form id="form">
+                    <label for="x-set" class="form-label mb-2">Masukkan Nilai x</label>
+                    <br>
+                    <p class="desc mb-n4">Rentang Awal | Rentang Akhir | Selisih</p>
+
+                    <input type="number" id="start" name="x-set"
+                        class="form-control d-inline-block bg-transparent x-set border-dark" value="-10">
+                    <input type="number" id="end" name="x-set"
+                        class="form-control d-inline-block bg-transparent x-set border-dark" value="10">
+                    <input type="number" id="interval" name="x-set"
+                        class="form-control d-inline-block bg-transparent x-set border-dark" value="1">
+                    <br>
+                    <label for="eq" class="form-label mt-4">Masukkan Persamaan:</label>
+                    <input type="text" class="bg-transparent border-dark form-control " id="eq"
+                        value="4 * sin(x) + 5 * cos(x/2)" />
+                    <input type="submit" value="Gambar" class="btn btn-outline-dark mt-3" />
+                </form>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-md-12 overflow-scroll">
+                <div id="plot"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center">`
+                <div class="box">
+                    <p>
+                        Menggunakan Library: <a href="https://plot.ly/javascript/">Plotly </a> </p>
+                </div>
+            </div>
+        </div>
+    </div>
+        <div class="modal fade" id="guideModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Panduan Penggunaan Alat</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                   1. Mengisi skala rentang awal dan akhir serta selisihnya sebagai nilai x yang akan dimasukkan <br>
+                   2. Mengisi persamaan yang hanya mengandung variabel x karena variabel y adalah hasil dari persamaan tersebut seperti layaknya persamaan garis matematis. <br>
+                   3. Cara penulisan rumus: 1. Menggunakan simbol *(Perkalian),^(Pangkat), /(Pembagian), +(Penjumlahan), -(Minus/Pengurangan). 2. Termasuk dalam penulisan variabel, 2x ditulis menjadi 2*x. 3. Penulisan sin,cos,tan adalah sin(x), cos(x/2), tan(x^2)
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous">
+    </script>
+    <!-- My Script -->
+    <script src="script.js"></script>
+</body>
+
+</html>
